@@ -1,0 +1,42 @@
+$green:#0c9c56;  $black:#242424;   $yellow:yellow;
+
+@mixin big{    @media(max-width:1000px){@content}    };
+@mixin medium{ @media(max-width:750px){@content}     };
+@mixin small{  @media(max-width:300px){@content}     };
+
+*{padding:0;  margin:0; }
+body{margin-left:210px;  }
+
+
+//------------------------------  Header section statrt ------------------------------------//
+
+.header{    position:fixed; left:0; height:0; height:100vh;  width:210px; background:$green; 
+
+    .title{ display:flex; justify-content:left; margin:20px 20px;  cursor:pointer;  border-bottom:solid 1px white;
+        i{margin-right:10px;  font-size:25px; color:$yellow;   &::selection{color:$black;} }
+        h3{font-size:24px; color:white; font-weight:100px;   &::selection{color:$black;} }
+    }
+
+    .ul{
+        display:flex; flex-direction:column; margin:50px 40px 0 15px;
+        a{ text-decoration:none; color:white; margin:8px 5px;    &::selection{color:$black;}
+            i{color:$yellow; margin-right:7px; font-size:14px;}  
+        &:hover{color:$black; margin-left:15px; font-weight:700;  transition:.3s;}
+        }
+    }
+
+    .contacts{  
+        .contact{ display:flex; margin-top:45px;  justify-content:center;
+            a{color:$black; text-decoration:none; background-color:white; margin:5px 2px; padding:10px; }
+            a:hover{ background:$black; color:white; transition:.5s;}
+        }
+        .rights{ margin-top:30px; display:grid; justify-content:center;
+            h3{ color:white; font-size:14px; font-family: 'Raleway', sans-serif; margin-bottom:5px;  &::selection{color:$black;}}
+            span{color:$yellow; font-size:16px;   &::selection{color:$black;}}
+            h4{ color:white; font-size:13px; font-family: 'Raleway', sans-serif; &::selection{color:$black;}}
+    
+        }
+
+    }
+
+}
