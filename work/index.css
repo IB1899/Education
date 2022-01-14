@@ -31,7 +31,7 @@ body {
 .header .title i {
   margin-right: 10px;
   font-size: 25px;
-  color: yellow;
+  color: #eaff05;
 }
 
 .header .title i::-moz-selection {
@@ -82,7 +82,7 @@ body {
 }
 
 .header .ul a i {
-  color: yellow;
+  color: #eaff05;
   margin-right: 7px;
   font-size: 14px;
 }
@@ -93,6 +93,11 @@ body {
   font-weight: 700;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+.header .ul .hom {
+  color: black;
+  font-weight: 900;
 }
 
 .header .contacts .contact {
@@ -145,7 +150,7 @@ body {
 }
 
 .header .contacts .rights span {
-  color: yellow;
+  color: #eaff05;
   font-size: 16px;
 }
 
@@ -169,5 +174,211 @@ body {
 
 .header .contacts .rights h4::selection {
   color: #242424;
+}
+
+.Home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.Home img {
+  height: 650px;
+  width: 650px;
+  margin-top: -100px;
+}
+
+.Home .text {
+  margin-top: -100px;
+  margin-left: -40px;
+}
+
+.Home .text h3 {
+  color: #0c9c56;
+  font-size: 20px;
+  line-height: 47px;
+}
+
+.Home .text h3::-moz-selection {
+  color: white;
+  background: black;
+}
+
+.Home .text h3::selection {
+  color: white;
+  background: black;
+}
+
+.Home .text h1 {
+  font-size: 30px;
+  width: 400px;
+  color: #242424;
+  padding-bottom: 10px;
+}
+
+.Home .text h1 span {
+  color: #0c9c56;
+  cursor: pointer;
+}
+
+.Home .text h1::-moz-selection {
+  color: white;
+  background: black;
+}
+
+.Home .text h1::selection {
+  color: white;
+  background: black;
+}
+
+.Home .text p {
+  width: 390px;
+  font-size: 15px;
+  line-height: 23px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.Home .text p::-moz-selection {
+  color: white;
+  background: black;
+}
+
+.Home .text p::selection {
+  color: white;
+  background: black;
+}
+
+.Home .text a {
+  color: white;
+  background: #242424;
+  text-decoration: none;
+  padding: 8px 13px;
+}
+
+.Home .text a::-moz-selection {
+  color: white;
+  background: black;
+}
+
+.Home .text a::selection {
+  color: white;
+  background: black;
+}
+
+.Home .text a:hover {
+  background: #0c9c56;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.category .Home {
+  display: none;
+}
+
+.category .Category {
+  display: block;
+}
+
+.category .header .hom {
+  color: white;
+  font-weight: 100;
+}
+
+.category .header .cat {
+  color: #242424;
+  font-weight: 900;
+}
+
+.about .Home {
+  display: none;
+}
+
+.about .header .hom {
+  color: white;
+  font-weight: 100;
+}
+
+.about .header .abo {
+  color: #242424;
+  font-weight: 900;
+}
+
+.courses .Home {
+  display: none;
+}
+
+.courses .header .hom {
+  color: white;
+  font-weight: 100;
+}
+
+.courses .header .cou {
+  color: #242424;
+  font-weight: 900;
+}
+
+.pricing .Home {
+  display: none;
+}
+
+.pricing .header .hom {
+  color: white;
+  font-weight: 100;
+}
+
+.pricing .header .pri {
+  color: #242424;
+  font-weight: 900;
+}
+
+.contact .Home {
+  display: none;
+}
+
+.contact .header .hom {
+  color: white;
+  font-weight: 100;
+}
+
+.contact .header .con {
+  color: #242424;
+  font-weight: 900;
+}
+
+.review .Home {
+  display: none;
+}
+
+.review .header .hom {
+  color: white;
+  font-weight: 100;
+}
+
+.review .header .rev {
+  color: #242424;
+  font-weight: 900;
+}
+
+.blogs .Home {
+  display: none;
+}
+
+.blogs .header .hom {
+  color: white;
+  font-weight: 100;
+}
+
+.blogs .header .blo {
+  color: #242424;
+  font-weight: 900;
 }
 /*# sourceMappingURL=index.css.map */

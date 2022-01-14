@@ -1,4 +1,4 @@
-$green:#0c9c56;  $black:#242424;   $yellow:yellow;
+$green:#0c9c56;  $black:#242424;   $yellow:#eaff05;
 
 @mixin big{    @media(max-width:1000px){@content}    };
 @mixin medium{ @media(max-width:750px){@content}     };
@@ -23,6 +23,7 @@ body{margin-left:210px;  }
             i{color:$yellow; margin-right:7px; font-size:14px;}  
         &:hover{color:$black; margin-left:15px; font-weight:700;  transition:.3s;}
         }
+        .hom{color:black; font-weight:900;}
     }
 
     .contacts{  
@@ -34,9 +35,155 @@ body{margin-left:210px;  }
             h3{ color:white; font-size:14px; font-family: 'Raleway', sans-serif; margin-bottom:5px;  &::selection{color:$black;}}
             span{color:$yellow; font-size:16px;   &::selection{color:$black;}}
             h4{ color:white; font-size:13px; font-family: 'Raleway', sans-serif; &::selection{color:$black;}}
-    
         }
 
     }
 
 }
+
+
+//------------------------------  Home section statrt ------------------------------------//
+.Home{
+    display:flex; align-items:center; justify-content:center; height:100vh;
+
+    img{ height:650px; width:650px;  margin-top:-100px;}
+
+    .text{ margin-top:-100px; margin-left:-40px ; 
+        h3{ color:$green; font-size:20px; line-height:47px;   &::selection{color:white; background:black;}}
+       
+        h1{ font-size:30px; width:400px; color:$black; padding-bottom:10px; span{color:$green; cursor: pointer;} 
+          &::selection{color:white; background:black;}  
+        }
+
+        p{ width:390px;  font-size:15px;  line-height:23px;  font-family: 'Raleway', sans-serif;
+             font-weight:700; margin-bottom:25px;  &::selection{color:white; background: ;}
+        }
+
+        a{ color:white; background:$black;  text-decoration:none;  padding:8px 13px; &::selection{color:white; background:black;} 
+        &:hover{ background:$green;  transition:.4s;} 
+        }
+    
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------  ON click ------------------------------------//
+.category .Home{display:none;}
+.category .Category{display:block;}
+.category .header{
+    .hom{color:white; font-weight:100;}
+    .cat{color:$black; font-weight:900;}
+}  
+//-----
+.about .Home{display:none;}
+.about .header{
+    .hom{color:white; font-weight:100;}
+    .abo{color:$black; font-weight:900;}
+}  
+//-----
+.courses .Home{display:none;}
+.courses .header{
+    .hom{color:white; font-weight:100;}
+    .cou{color:$black; font-weight:900;}
+}  
+//-----
+.pricing .Home{display:none;}
+.pricing .header{
+    .hom{color:white; font-weight:100;}
+    .pri{color:$black; font-weight:900;}
+}  
+//-----
+.contact .Home{display:none;}
+.contact .header{
+    .hom{color:white; font-weight:100;}
+    .con{color:$black; font-weight:900;}
+}  
+//-----
+.review .Home{display:none;}
+.review .header{
+    .hom{color:white; font-weight:100;}
+    .rev{color:$black; font-weight:900;}
+}  
+//-----
+.blogs .Home{display:none;}
+.blogs .header{
+    .hom{color:white; font-weight:100;}
+    .blo{color:$black; font-weight:900;}
+}  
+//-----
