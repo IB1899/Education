@@ -23,8 +23,7 @@ body {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  margin: 20px 20px;
-  cursor: pointer;
+  margin: 20px 10px;
   border-bottom: solid 1px white;
 }
 
@@ -54,6 +53,35 @@ body {
 
 .header .title h3::selection {
   color: #242424;
+}
+
+.header .title #sun {
+  color: white;
+  margin-left: 25px;
+  padding-top: 3px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.header .title #sun:hover {
+  color: black;
+  -webkit-animation: try 1.5s linear infinite;
+          animation: try 1.5s linear infinite;
+  margin-top: 0px;
+}
+
+@-webkit-keyframes try {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes try {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .header .ul {
@@ -126,7 +154,7 @@ body {
 }
 
 .header .contacts .rights {
-  margin-top: 30px;
+  margin-top: 35px;
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -202,7 +230,7 @@ body {
 
 .Home .text h3 {
   color: #0c9c56;
-  font-size: 20px;
+  font-size: 21px;
   line-height: 47px;
 }
 
@@ -217,7 +245,7 @@ body {
 }
 
 .Home .text h1 {
-  font-size: 30px;
+  font-size: 31px;
   width: 400px;
   color: #242424;
   padding-bottom: 10px;
@@ -226,6 +254,10 @@ body {
 .Home .text h1 span {
   color: #0c9c56;
   cursor: pointer;
+}
+
+.Home .text h1 span:hover {
+  border-bottom: 1.5px solid #0c9c56;
 }
 
 .Home .text h1::-moz-selection {
@@ -240,7 +272,7 @@ body {
 
 .Home .text p {
   width: 390px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 23px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -482,6 +514,179 @@ body {
   color: white;
 }
 
+.About {
+  display: none;
+  height: 100vh;
+}
+
+.About .text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 80px;
+  margin-top: -50px;
+}
+
+.About .text h1 {
+  color: #0c9c56;
+  font-size: 21px;
+  line-height: 40px;
+}
+
+.About .text h1::-moz-selection {
+  background: #0c9c56;
+  color: white;
+}
+
+.About .text h1::selection {
+  background: #0c9c56;
+  color: white;
+}
+
+.About .text h2 {
+  color: #242424;
+  font-size: 31px;
+  width: 350px;
+}
+
+.About .text h2::-moz-selection {
+  background: black;
+  color: white;
+}
+
+.About .text h2::selection {
+  background: black;
+  color: white;
+}
+
+.About .text ul {
+  padding: 10px 15px;
+  margin-bottom: 14px;
+  list-style-type: square;
+  width: 120%;
+}
+
+.About .text ul li {
+  line-height: 32px;
+  font-size: 17px;
+}
+
+.About .text ul li::-moz-selection {
+  background: black;
+  color: white;
+}
+
+.About .text ul li::selection {
+  background: black;
+  color: white;
+}
+
+.About .text ul li::first-letter {
+  color: #0c9c56;
+  font-size: 19px;
+}
+
+.About .text a {
+  color: white;
+  background: #242424;
+  text-decoration: none;
+  padding: 8px 13px;
+}
+
+.About .text a:hover {
+  background: #0c9c56;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.About .img {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.About .img img {
+  width: 620px;
+}
+
+.About .menu {
+  display: none;
+}
+
+.About.open .text {
+  display: none;
+}
+
+.About.open img {
+  display: none;
+}
+
+.About.open .menu {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 210px;
+  background-color: #c2c2c2;
+  height: 100vh;
+}
+
+.About.open .menu i {
+  color: #0c9c56;
+  font-size: 32px;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.About.open .menu i:hover {
+  color: black;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.About.open .menu ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  list-style-type: number;
+  margin-top: 10px;
+}
+
+.About.open .menu ul li {
+  margin: 20px 40px;
+  font-size: 19px;
+  color: #242424;
+  font-weight: 400;
+}
+
+.About.open .menu ul li::first-letter {
+  color: #0c9c56;
+  font-size: 30px;
+}
+
+.About.open .menu ul li p {
+  font-size: 15px;
+  margin-top: 8px;
+  font-weight: 100;
+}
+
+.About.open .menu ul li p::-moz-selection {
+  background: white;
+}
+
+.About.open .menu ul li p::selection {
+  background: white;
+}
+
+.About.open .menu ul li::-moz-selection {
+  background: white;
+}
+
+.About.open .menu ul li::selection {
+  background: white;
+}
+
 .category .Home {
   display: none;
 }
@@ -502,6 +707,12 @@ body {
 
 .about .Home {
   display: none;
+}
+
+.about .About {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .about .header .hom {

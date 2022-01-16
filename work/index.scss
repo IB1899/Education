@@ -12,9 +12,13 @@ body{margin-left:210px;  }
 
 .header{    position:fixed; left:0; top:0; height:100vh;  width:210px; background:$green; 
 
-    .title{ display:flex; justify-content:left; margin:20px 20px;  cursor:pointer;  border-bottom:solid 1px white;
+    .title{ display:flex; justify-content:left; margin:20px 10px;    border-bottom:solid 1px white;
         i{margin-right:10px;  font-size:25px; color:$yellow;   &::selection{color:$black;} }
         h3{font-size:24px; color:white; font-weight:100px;   &::selection{color:$black;} }
+        #sun{color:white;  margin-left:25px; padding-top:3px; font-size:21px;  cursor:pointer;
+            &:hover{color:black;    animation:try 1.5s linear infinite;  margin-top:0px; }   
+        }
+        @keyframes try{  100%{transform: rotate(360deg) ;} }
     }
 
     .ul{
@@ -28,11 +32,11 @@ body{margin-left:210px;  }
 
     .contacts{  
         .contact{ display:flex; margin-top:45px;  justify-content:center;
-            a{color:$black; text-decoration:none; background-color:white; margin:5px 2px; padding:10px; }
+            a{color:$black; text-decoration:none; background-color:white; margin:5px 2px; padding:10px;  }
             a:hover{ background:$black; color:white; transition:.5s;}
         }
-        .rights{ margin-top:30px; display:grid; justify-content:center;
-            h3{ color:white; font-size:14px; font-family: 'Raleway', sans-serif; margin-bottom:5px;  &::selection{color:$black;}}
+        .rights{ margin-top:35px; display:grid; justify-content:center;
+            h3{ color:white; font-size:14px; font-family: 'Raleway', sans-serif;  margin-bottom:5px;  &::selection{color:$black;}}
             span{color:$yellow; font-size:16px;   &::selection{color:$black;}}
             h4{ color:white; font-size:13px; font-family: 'Raleway', sans-serif; &::selection{color:$black;}}
         }
@@ -43,20 +47,21 @@ body{margin-left:210px;  }
 
 
 //------------------------------  Home section statrs ------------------------------------//
-.Home{
-    display:flex; align-items:center; justify-content:center; height:100vh; 
+.Home{  
+    display:flex; align-items:center; justify-content:center; height:100vh; //display:none;
 
     img{ height:650px; width:650px;  margin-top:-100px;}
 
     .text{ margin-top:-100px; margin-left:-40px ; 
-        h3{ color:$green; font-size:20px; line-height:47px;   &::selection{color:white; background:black;}}
+        h3{ color:$green; font-size:21px; line-height:47px;   &::selection{color:white; background:black;}}
        
-        h1{ font-size:30px; width:400px; color:$black; padding-bottom:10px; span{color:$green; cursor: pointer;} 
+        h1{ font-size:31px; width:400px; color:$black; padding-bottom:10px;
+            span{color:$green; cursor: pointer; &:hover{border-bottom:1.5px solid $green; }  } 
           &::selection{color:white; background:black;}  
         }
 
-        p{ width:390px;  font-size:15px;  line-height:23px;  font-family: 'Raleway', sans-serif;
-             font-weight:700; margin-bottom:25px;  &::selection{color:white; background:$black;}
+        p{ width:390px;  font-size:16px;  line-height:23px;  font-family: 'Raleway', sans-serif;
+            font-weight:700; margin-bottom:25px;  &::selection{color:white; background:$black;}
         }
 
         a{ color:white; background:$black;  text-decoration:none;  padding:8px 13px; &::selection{color:white; background:black;} 
@@ -124,14 +129,46 @@ body{margin-left:210px;  }
 
 
 //------------------------------  About section statrs ------------------------------------//
+.About{
+    display:none; height:100vh; 
+    
+    .text{ align-self:center;  padding-left:80px;   margin-top:-50px;
 
+        h1{color:$green;  font-size:21px;  line-height:40px;    &::selection{background:$green; color:white;}}
+        h2{color:$black;  font-size:31px;  width:350px;  &::selection{background:black; color:white;}  }
+        
+        ul{ padding:10px 15px;  margin-bottom:14px;  list-style-type:square; width:120%;  
+            li{line-height:32px; font-size:17px;  &::selection{background:black; color:white;} }
+            li::first-letter{color:$green; font-size:19px;}
+        }
+        
+        a{color:white; background:$black;  text-decoration:none; padding:8px 13px; &:hover{ background:$green;  transition:.4s;}}
+    }
 
+    .img{   align-self:flex-start;    img{width:620px;}  }
 
+    .menu{display:none;}
+}
+//-----------------
+.About.open{  .text{display:none;}      img{display:none;}
 
+.menu{ position:absolute; display:block;  top:0; left:210px;  background-color:#c2c2c2;  height:100vh; 
+        
+    i{color:$green;  font-size:32px;  position:absolute;  top:15px; right:25px;  cursor:pointer;}
+    i:hover{color:black; transition:.6s;  }
 
+    ul{display:grid; grid-template-columns:repeat(2, auto);  list-style-type:number;   margin-top:10px;
 
+        li{margin:20px 40px;  font-size:19px; color:$black; font-weight:400; &::first-letter{color:$green; font-size:30px;}     
+            p{font-size:15px; margin-top:8px; font-weight:100; &::selection{background:white;}}
+        }
+        li::selection{background:white;}    
+    }
+}
+}
 
 
+//------------------------------  Courses section statrs ------------------------------------//
 
 
 
@@ -197,7 +234,11 @@ body{margin-left:210px;  }
 
 
 
-//------------------------------  ON click ------------------------------------//
+
+
+
+
+//------------------------------  Router ------------------------------------//
 .category .Home{display:none;}
 .category .Category{display:block;}
 .category .header{
@@ -207,6 +248,7 @@ body{margin-left:210px;  }
 }  
 //-----
 .about .Home{display:none;}
+.about .About{display:flex;}
 .about .header{
     .hom{color:white; font-weight:100;}
     .abo{color:$black; font-weight:900;}

@@ -81,3 +81,13 @@ review.addEventListener("click", ()=>{ body.classList.remove("blogs")});
 
 //----------------------------------------------------------------------------------------//
 
+let About = document.querySelector(".About")
+let AboutRead = document.querySelector(".AboutRead");
+let AboutReadClose = document.querySelector("#AboutReadClose")
+
+AboutRead.addEventListener("click", ()=>{   About.classList.add("open")   })
+AboutReadClose.addEventListener("click", ()=>{   About.classList.remove("open")   })
+//--------------------------------------------------------------------
+let GetStared = document.querySelector(".GetStared")
+GetStared.addEventListener("click", ()=>{  body.classList.add("category") })
+//--------------------------------------------------------------------
