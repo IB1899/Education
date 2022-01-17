@@ -23,7 +23,7 @@ body{margin-left:210px;  }
 
     .ul{
         display:flex; flex-direction:column; margin:50px 40px 0 15px;
-        a{ text-decoration:none; color:white; margin:8px 5px;    &::selection{color:$black;}
+        a{ text-decoration:none; color:white; margin:10px 5px; font-size:17px;   &::selection{color:$black;}
             i{color:$yellow; margin-right:7px; font-size:14px;}  
         &:hover{color:$black; margin-left:15px; font-weight:700;  transition:.3s;}
         }
@@ -64,7 +64,8 @@ body{margin-left:210px;  }
             font-weight:700; margin-bottom:25px;  &::selection{color:white; background:$black;}
         }
 
-        a{ color:white; background:$black;  text-decoration:none;  padding:8px 13px; &::selection{color:white; background:black;} 
+        a{ color:white; background:$black;  text-decoration:none;  padding:8px 13px; &::selection{color:white; background:black;}
+        box-shadow: 2px 2px 4px $green ; 
         &:hover{ background:$green;  transition:.4s;} 
         }
     }
@@ -125,6 +126,32 @@ body{margin-left:210px;  }
          &:hover{background-color:black;  transition:.8s;  h5{color:white;}}   
         }
     }
+
+    .container3{  display:grid;  grid-template-columns: repeat(3,auto);  justify-content:center;  margin:45px 0px;
+        grid-column-gap:30px; grid-row-gap:20px;  
+
+        .box{ padding:10px;    height:250px; width:250px; text-align:center; display:grid; 
+            box-shadow: 3px 3px 5px $green ;
+            .one{  
+                img{width:220px;  }
+                h3{ margin-top:-10px;}
+            }
+            
+            .two{display:none;  align-self:center; 
+               
+                .stars{ margin:10px 0;  i{color:$yellow;  font-size:15px;  margin:0 2px;}}
+                h3{ color:white;  }
+                p{ color:white;  margin:15px 2px; padding-bottom:21px;  font-size:15px;}
+             
+                a{  padding:7px 15px;  color:white; background:black;  text-decoration:none; cursor:pointer;
+                  &:hover{ color:black;  background:$yellow;  transition:.5s;}
+                }
+            }
+
+            &:hover{ background:$green;  transition:.6s;  .one{display:none;}    .two{ display:block; }  }
+        }
+        
+    }
 }
 
 
@@ -142,7 +169,9 @@ body{margin-left:210px;  }
             li::first-letter{color:$green; font-size:19px;}
         }
         
-        a{color:white; background:$black;  text-decoration:none; padding:8px 13px; &:hover{ background:$green;  transition:.4s;}}
+        a{color:white; background:$black;  text-decoration:none; padding:8px 13px; &:hover{ background:$green;  transition:.4s;}
+        box-shadow: -2px 2px 3px $green ;
+        }
     }
 
     .img{   align-self:flex-start;    img{width:620px;}  }
@@ -159,7 +188,7 @@ body{margin-left:210px;  }
 
     ul{display:grid; grid-template-columns:repeat(2, auto);  list-style-type:number;   margin-top:10px;
 
-        li{margin:20px 40px;  font-size:19px; color:$black; font-weight:400; &::first-letter{color:$green; font-size:30px;}     
+        li{margin:20px 40px;  font-size:19px; color:$black; font-weight:400; &::first-letter{color:$green; font-size:30px;} 
             p{font-size:15px; margin-top:8px; font-weight:100; &::selection{background:white;}}
         }
         li::selection{background:white;}    
@@ -168,8 +197,54 @@ body{margin-left:210px;  }
 }
 
 
-//------------------------------  Courses section statrs ------------------------------------//
+//------------------------------  Pricing section statrs ------------------------------------//
+.Pricing{width:100%;  background:#ededed;  padding:20px 0;  display:none;
 
+    h2{text-align:center;  color:$green;  font-size:19px;   text-transform:uppercase;
+        font-family: 'Roboto Slab', serif; font-weight:900;   margin-top:-10px;
+    }
+    h1{text-align:center;  color:$black;  font-size:29px;   text-transform:uppercase;  font-weight:600;
+        font-family: 'Roboto Slab', serif;  
+    }
+
+    .container{ display:grid; grid-template-columns: repeat(2,auto);  grid-column-gap:20px;  grid-row-gap:10px;
+          margin:15px 30px;  justify-content:center;  
+
+        .box{box-shadow: 2px 2px 3px $green;  text-align:center;   width:350px; padding:10px 3px; padding-bottom:16px; background:white;
+            h3{ font-size:20px; margin:6px 0; }
+            img{ width:180px;  margin-top:-30px; }
+            
+            .price{ margin-top:-20px;  font-size:14px; span{font-size:27px; }}
+
+            ul{ display:grid; grid-template-columns:repeat(3,auto);   grid-column-gap:2px;  grid-row-gap:5px;  list-style:none;
+                 margin-top:12px;  padding-bottom:20px;
+                li{ font-size:14px;  .fa-check{color:$green; margin-right:3px;} .fa-times{color:red;  margin-right:3px; }}
+            }
+
+            a{ color:white; background:black;  padding:6px 12px;  text-decoration:none;
+                &:hover{color:white; background:$green;  transition:.5s;}
+            }
+        }
+
+        .box2{  box-shadow: 2px 2px 3px $green;  text-align:center; padding:10px;   grid-column:1/3;  background:white;
+            
+            h3{font-size:20px; margin:4px 0;}
+
+            .middle{ display:flex;  justify-content:center;  margin-top:10px;
+                ul{list-style:none; 
+                    li{font-size:15px; margin-top:10px; .fa-check{color:$green; margin-right:3px;} .fa-times{color:red;  margin-right:3px; } }
+                }
+                img{width:320px; height:190px;   margin-top:-35px;}
+            }
+
+            .price{   padding-bottom:17px;  font-size:14px; span{font-size:27px; }  margin-top:-20px;}
+            a{ color:white; background:black;  padding:6px 12px;  text-decoration:none;
+                &:hover{color:white; background:$green;  transition:.5s;}
+            }
+        }
+
+    }
+}
 
 
 
@@ -261,6 +336,7 @@ body{margin-left:210px;  }
 }  
 //-----
 .pricing .Home{display:none;}
+.pricing .Pricing{display:block;}
 .pricing .header{
     .hom{color:white; font-weight:100;}
     .pri{color:$black; font-weight:900;}
