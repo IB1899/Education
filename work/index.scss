@@ -4,7 +4,7 @@ $green:#0c9c56;  $black:#242424;   $yellow:#eaff05;
 @mixin medium{ @media(max-width:750px){@content}     };
 @mixin small{  @media(max-width:300px){@content}     };
 
-*{padding:0;  margin:0; }
+*{padding:0;  margin:0;   &::selection{color:red; background:black;} }
 body{margin-left:210px;  }
 
 
@@ -14,7 +14,7 @@ body{margin-left:210px;  }
 
     .title{ display:flex; justify-content:left; margin:20px 10px;    border-bottom:solid 1px white;
         i{margin-right:10px;  font-size:25px; color:$yellow;   &::selection{color:$black;} }
-        h3{font-size:24px; color:white; font-weight:100px;   &::selection{color:$black;} }
+        h3{font-size:24px; color:white; font-weight:100px;   &::selection{color:$black;  background:$green;} }
         #sun{color:white;  margin-left:25px; padding-top:3px; font-size:21px;  cursor:pointer;
             &:hover{color:black;    animation:try 1.5s linear infinite;  margin-top:0px; }   
         }
@@ -47,8 +47,7 @@ body{margin-left:210px;  }
 
 
 //------------------------------  Home section statrs ------------------------------------//
-.Home{  
-    display:flex; align-items:center; justify-content:center; height:100vh; //display:none;
+.Home{   display:flex; align-items:center; justify-content:center; height:100vh; //display:none;
 
     img{ height:650px; width:650px;  margin-top:-100px;}
 
@@ -84,8 +83,8 @@ body{margin-left:210px;  }
     .container{ display:grid; align-items:center;  justify-content:center;  margin-top:30px;
         grid-template-columns: repeat(3, 310px);  grid-column-gap:10px; grid-row-gap:10px;
         
-        .box{ background:white;  border:1px solid $black;  padding:30px 15px ;  text-align:center; height:130px;
-            box-shadow: 3px 3px  4px $green;
+        .box{ background:white; border:1px solid black;  padding:30px 15px ;  text-align:center; height:130px;
+           
             i{color:white; background:$green; padding:12px; border-radius:4px;   font-size:23px;  cursor:pointer; } 
 
             h3{color:$black;  margin:10px 0;   font-size:21px;  font-weight:900;}
@@ -94,7 +93,7 @@ body{margin-left:210px;  }
             .boxin{display:none;}
         
          &:hover{
-            background:black;  transition:.5s;
+            background:black;  transition:.8s;
             h3{color:white;}     p{display:none;} 
 
             .boxin{ display:grid;     margin-top:10px;   grid-template-columns: repeat(2, auto) ;  
@@ -148,7 +147,7 @@ body{margin-left:210px;  }
                 }
             }
 
-            &:hover{ background:$green;  transition:.6s;  .one{display:none;}    .two{ display:block; }  }
+            &:hover{ background:$green;  transition:.9s;  .one{display:none;}    .two{ display:block; }  }
         }
         
     }
@@ -226,7 +225,7 @@ body{margin-left:210px;  }
             }
         }
 
-        .box2{  box-shadow: 2px 2px 3px $green;  text-align:center; padding:10px;   grid-column:1/3;  background:white;
+        .box2{box-shadow:2px 2px 3px $green;  text-align:center; padding:10px;  grid-column:1/3;  background:white;
             
             h3{font-size:20px; margin:4px 0;}
 
@@ -247,15 +246,108 @@ body{margin-left:210px;  }
 }
 
 
+//------------------------------  Reviews section statrs ------------------------------------//
+.Reviews{ background:#ededed; padding:20px 0; display:none;
+
+    h2{text-align:center;  color:$green;  font-size:19px;   text-transform:uppercase;
+        font-family: 'Roboto Slab', serif; font-weight:900;   margin-top:-10px;   &::selection{color:white; background:black;}
+    }
+    h1{text-align:center;  color:$black;  font-size:29px;   text-transform:uppercase;  font-weight:900;  &::selection{color:white; background:black;} }
+
+    .container{ display:grid;  justify-content:center;  grid-template-columns: repeat(3,auto);  
+        grid-column-gap:10px; grid-row-gap:10px;  margin:20px 60px;
+        
+        .box{  box-shadow:2px 2px 3px $green;  background:white; text-align:center; height:270px; border-radius:10px; ;
+           
+            
+            .user{display:flex;  margin-top:15px;  justify-content:center;
+                img{width:100px; border-radius:50px; margin-right:10px;}
+                .name{ margin-top:35px;
+                  h3{color:black; font-size:20px;  &::first-letter{color:$green;  font-size:24px;}}  h3::selection{color:white; background:black;}
+                  span{color:$black; font-size:15px; font-family: 'Roboto Slab', serif; color:gray;  &::selection{color:white; background:black;}} 
+                }
+            }
+
+            .down{ margin-top:10px;
+                p{ color:$black;  font-size:14px;  margin:0 23px;   &::selection{color:white; background:black;}}
+                .stars{  margin-top:15px; i{color:$green; font-size:15px; margin-right:2px; } }
+            }
+        }
+        .box2{ box-shadow:2px 2px 3px $green;  background:white; text-align:center;  border-radius:10px; grid-row:1/3; grid-column:3/4;
+            
+            .user{  margin-top:15px;  
+                img{width:120px;  height:130px;  border-radius:50px; margin-top:15px}
+                .name{ margin-top:20px; h3{color:$black; font-size:20px;  &:first-letter{color:$green;  font-size:25px;}  h3::selection{color:white; background:black;} }
+                  span{ font-size:15px; font-family: 'Roboto Slab', serif; color:gray;   &::selection{color:white; background:black;}} 
+                }
+            }
+            .down{ margin-top:20px;
+                p{ color:$black;  font-size:14px;  margin:0 20px;  &::selection{color:white; background:black;}}
+                .stars{  margin-top:15px; i{color:$green; font-size:15px; margin-right:2px;} }
+            }
+        }
+        .box3{  box-shadow:2px 2px 3px $green;   background:white; text-align:center;  border-radius:10px; grid-column:1/3; padding-bottom:5px;
+            
+            .user{display:flex;  margin-top:15px;  justify-content:center;
+                img{width:120px; height:110px;  border-radius:50px; margin-right:10px;}
+                .name{ margin-top:40px; h3{color:black; font-size:20px; &:first-letter{color:$green;  font-size:25px;}  h3::selection{color:white; background:black;}}
+                  span{ font-size:15px; font-family: 'Roboto Slab', serif; color:gray;    &::selection{color:white; background:black;}} 
+                }
+            }
+            .down{ margin-top:15px;
+                p{ color:$black;  font-size:14px;  margin:0 20px;   &::selection{color:white; background:black;}}
+                .stars{  margin-top:15px; i{color:$green; font-size:15px; margin-right:2px;} }
+            }
+        }
+        .box4{  box-shadow:2px 2px 3px $green;   background:white; text-align:center;  border-radius:10px; grid-column:2/4; 
+            .user{display:flex;  margin-top:15px;  justify-content:center;
+                img{width:120px;  height:110px; border-radius:50px; margin-right:10px;}
+                .name{ margin-top:40px; h3{color:black; font-size:20px; &:first-letter{color:$green;  font-size:25px;}  h3::selection{color:white; background:black;}}
+                  span{ font-size:15px; font-family: 'Roboto Slab', serif; color:gray;   &::selection{color:white; background:black;}} 
+                }
+            }
+            .down{ margin-top:10px;
+                p{ color:$black;  font-size:14px;  margin:0 20px;   &::selection{color:white; background:black;}}
+                .stars{  margin-top:15px; i{color:$green; font-size:15px; margin-right:2px;} }
+            }
+        }
+    }
+
+}
 
 
+//------------------------------  Reviews section statrs ------------------------------------//
+.Blogs{ background:#ededed; padding:23px 0;    display:none;
+    h2{text-align:center;  color:$green;  font-size:19px;   text-transform:uppercase;  font-weight:900;   &::selection{color:white; background:black;}}
+    h1{text-align:center;  color:$black;  font-size:29px;   text-transform:uppercase;  font-weight:900; font-family: 'Roboto Slab', serif;  &::selection{color:white; background:black;}}
+
+    .container{ display:flex;  justify-content:center;  margin:30px;
+        .box{ text-align:center;  border:1px solid black; margin-right:20px;   background:white;  box-shadow:2px 2px 3px $black;
+
+            img{width:240px;   &::selection{ background:white;}}
+            h3{color:$black; margin-top:10px;  font-size:20px;  &::selection{color:white; background:black;}}
+            p{color:$black;  margin:17px 15px;  font-size:15px;  line-height:23px; &::selection{color:white; background:black;}}
+
+            .bottom{ padding-top:5px;  padding:10px;  border-top:1px solid black; margin:0 7px; display:grid; grid-template-columns:repeat(2,auto); 
+                .one{ i{color:$green;}  font-size:16px; color:$black;  justify-content:left;   &::selection{color:white; background:black;}}
+                .two{ a{text-decoration:none; color:$black;  font-weight:700; &:hover{color:$green; } }     justify-content:right; margin-left:65px; }
+            }
+            &:hover{
+                img{width:240px; transition:.5s; transform: translateY(-20px);  animation: go 2s linear infinite}  
+            }
+            /*@keyframes go{
+                26%{  transform:translateY(20px);  } 
+                72%{  transform:translateY(-20px); } 
+                100%{ transform:translateY(0px);   }
+            }*/
+           
+        }
+    }
+
+}
 
 
-
-
-
-
-
+//------------------------------  Contact section statrs ------------------------------------//
 
 
 
@@ -349,12 +441,14 @@ body{margin-left:210px;  }
 }  
 //-----
 .review .Home{display:none;}
+.review .Reviews{display:block;}
 .review .header{
     .hom{color:white; font-weight:100;}
     .rev{color:$black; font-weight:900;}
 }  
 //-----
 .blogs .Home{display:none;}
+.blogs .Blogs{display:block;}
 .blogs .header{
     .hom{color:white; font-weight:100;}
     .blo{color:$black; font-weight:900;}
