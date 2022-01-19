@@ -34,6 +34,7 @@ body {
       -ms-flex-pack: left;
           justify-content: left;
   margin: 20px 10px;
+  padding-bottom: 5px;
   border-bottom: solid 1px white;
 }
 
@@ -94,6 +95,34 @@ body {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.header .title #sun:hover ~ .sun {
+  display: block;
+  position: absolute;
+  left: 216px;
+  top: 18px;
+  background: black;
+  color: white;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.header .title #sun:hover ~ .sun .dark {
+  display: block;
+  width: 80px;
+}
+
+.header .title .sun {
+  display: none;
+}
+
+.header .title .sun .dark {
+  display: none;
+}
+
+.header .title .sun .white {
+  display: none;
 }
 
 .header .ul {
@@ -182,39 +211,23 @@ body {
   margin-bottom: 5px;
 }
 
-.header .contacts .rights h3::-moz-selection {
-  color: #242424;
-}
-
-.header .contacts .rights h3::selection {
-  color: #242424;
-}
-
 .header .contacts .rights span {
   color: #eaff05;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .header .contacts .rights span::-moz-selection {
-  color: #242424;
+  color: white;
 }
 
 .header .contacts .rights span::selection {
-  color: #242424;
+  color: white;
 }
 
 .header .contacts .rights h4 {
   color: white;
   font-size: 13px;
   font-family: 'Raleway', sans-serif;
-}
-
-.header .contacts .rights h4::-moz-selection {
-  color: #242424;
-}
-
-.header .contacts .rights h4::selection {
-  color: #242424;
 }
 
 .Home {
@@ -286,7 +299,7 @@ body {
 .Home .text p {
   width: 390px;
   font-size: 16px;
-  line-height: 23px;
+  line-height: 24px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   margin-bottom: 25px;
@@ -329,6 +342,7 @@ body {
 
 .Category {
   display: none;
+  padding: 20px 0;
 }
 
 .Category h1 {
@@ -336,7 +350,7 @@ body {
   color: #0c9c56;
   font-size: 18px;
   text-transform: uppercase;
-  margin-top: 30px;
+  margin-top: 10px;
   font-family: 'Oxygen', sans-serif;
   font-weight: 900;
 }
@@ -729,7 +743,7 @@ body {
   display: block;
   top: 0;
   left: 210px;
-  background-color: #c2c2c2;
+  background: #c2c2c2;
   height: 100vh;
 }
 
@@ -1421,7 +1435,8 @@ body {
 
 .Blogs {
   background: #ededed;
-  padding: 23px 0;
+  padding: 26px 0;
+  height: 100vh;
   display: none;
 }
 
@@ -1591,6 +1606,545 @@ body {
           animation: go 2s linear infinite;
 }
 
+.Contact {
+  display: none;
+  height: 93vh;
+  padding: 21.5px 0;
+}
+
+.Contact h2 {
+  text-align: center;
+  color: #0c9c56;
+  font-size: 19px;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', serif;
+}
+
+.Contact h2::-moz-selection {
+  color: white;
+  background: black;
+}
+
+.Contact h2::selection {
+  color: white;
+  background: black;
+}
+
+.Contact h1 {
+  text-align: center;
+  color: #242424;
+  font-size: 29px;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', serif;
+}
+
+.Contact h1::-moz-selection {
+  color: white;
+  background: black;
+}
+
+.Contact h1::selection {
+  color: white;
+  background: black;
+}
+
+.Contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.Contact .container .left {
+  margin-left: 40px;
+  margin-top: -20px;
+}
+
+.Contact .container .left .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.Contact .container .left .box i {
+  color: white;
+  background: #0c9c56;
+  border-radius: 50px;
+  margin-right: 10px;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.Contact .container .left .box .details {
+  -webkit-transform: translateY(35px);
+          transform: translateY(35px);
+}
+
+.Contact .container .left .box .details h3 {
+  color: #242424;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.Contact .container .left .box .details span {
+  color: gray;
+  font-size: 15px;
+  margin-left: 10px;
+  line-height: 20px;
+}
+
+.Contact .container .left .box2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+  margin-left: 10px;
+}
+
+.Contact .container .left .box2 a {
+  text-decoration: none;
+  margin-right: 5px;
+  padding: 9px;
+  background: #242424;
+}
+
+.Contact .container .left .box2 a i {
+  color: white;
+  font-size: 16px;
+}
+
+.Contact .container .left .box2 a:hover {
+  background: #0c9c56;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.Contact .container .right {
+  margin-left: 90px;
+  margin-top: 70px;
+}
+
+.Contact .container .right .input {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.Contact .container .right .input input {
+  background: #ededed;
+  color: gray;
+  width: 310px;
+  height: 38px;
+  font-size: 15px;
+  border: none;
+  padding-left: 13px;
+}
+
+.Contact .container .right .input textarea {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  background: #ededed;
+  color: gray;
+  font-size: 15px;
+  border: none;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+.Contact .container .right a {
+  color: white;
+  background: black;
+  padding: 8px 15px;
+  text-decoration: none;
+  -webkit-box-shadow: 2px 2px 3px #0c9c56;
+          box-shadow: 2px 2px 3px #0c9c56;
+}
+
+.Contact .container .right a:hover {
+  background: #0c9c56;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.Dark {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.Dark .header .title {
+  border-bottom: 1px solid black;
+}
+
+.Dark .header #sun:hover ~ .sun {
+  background: white;
+  color: #1c1c1c;
+  width: 83px;
+}
+
+.Dark .header #sun:hover ~ .sun .dark {
+  display: none;
+}
+
+.Dark .header #sun:hover ~ .sun .white {
+  display: block;
+}
+
+.Dark .header #sun {
+  color: #1c1c1c;
+}
+
+.Dark .header #sun:hover {
+  color: white;
+}
+
+.Dark .header h3 {
+  color: black;
+}
+
+.Dark .header .contacts a {
+  background: #1c1c1c;
+  color: white;
+}
+
+.Dark .header .contacts a:hover {
+  background: white;
+  color: #1c1c1c;
+}
+
+.Dark .header .contacts h3 {
+  color: #1c1c1c;
+}
+
+.Dark .header .contacts h4 {
+  color: #1c1c1c;
+  font-weight: 900;
+}
+
+.Dark .Home {
+  background: black;
+}
+
+.Dark .Home h1 {
+  color: white;
+}
+
+.Dark .Home p {
+  color: #ededed;
+}
+
+.Dark .Home a {
+  background: white;
+  color: #0c9c56;
+}
+
+.Dark .Home a:hover {
+  color: white;
+}
+
+.Dark .Category {
+  background: #1c1c1c;
+}
+
+.Dark .Category h2 {
+  color: white;
+}
+
+.Dark .Category h4 {
+  color: white;
+}
+
+.Dark .Category .container .box {
+  background: #1c1c1c;
+  border: 1px solid white;
+}
+
+.Dark .Category .container .box h3 {
+  color: white;
+}
+
+.Dark .Category .container .box p {
+  color: #d9d9d9;
+}
+
+.Dark .Category .container .box:hover {
+  background: white;
+}
+
+.Dark .Category .container .box:hover h3 {
+  color: black;
+}
+
+.Dark .Category .container .box:hover .stars {
+  color: black;
+}
+
+.Dark .Category .container .box:hover .price span {
+  color: black;
+}
+
+.Dark .Category .container .box:hover .veiw {
+  color: black;
+}
+
+.Dark .Category .container2 .box {
+  background: #1c1c1c;
+}
+
+.Dark .Category .container2 .box h5 {
+  color: white;
+}
+
+.Dark .Category .container2 .box:hover {
+  background: white;
+}
+
+.Dark .Category .container2 .box:hover h5 {
+  color: black;
+}
+
+.Dark .Category .container3 .box {
+  background: black;
+}
+
+.Dark .Category .container3 .box .one h3 {
+  color: white;
+}
+
+.Dark .Category .container3 .box:hover {
+  background: #0c9c56;
+}
+
+.Dark .About {
+  background: #1c1c1c;
+}
+
+.Dark .About h2 {
+  color: white;
+}
+
+.Dark .About li {
+  color: #ededed;
+}
+
+.Dark .About a {
+  background: white;
+  color: black;
+}
+
+.Dark .About.open .menu {
+  background: #1c1c1c;
+}
+
+.Dark .About.open ul li {
+  color: #ededed;
+}
+
+.Dark .About.open ul p {
+  color: #ededed;
+}
+
+.Dark .About.open i:hover {
+  color: white;
+}
+
+.Dark .Pricing {
+  background: black;
+}
+
+.Dark .Pricing h1 {
+  color: white;
+}
+
+.Dark .Pricing .box {
+  background: #1c1c1c;
+}
+
+.Dark .Pricing .box h3 {
+  color: white;
+}
+
+.Dark .Pricing .box .price {
+  color: white;
+}
+
+.Dark .Pricing .box .price span {
+  color: white;
+}
+
+.Dark .Pricing .box li {
+  color: white;
+}
+
+.Dark .Pricing .box a {
+  background: white;
+  color: black;
+}
+
+.Dark .Pricing .box2 {
+  background: #1c1c1c;
+}
+
+.Dark .Pricing .box2 h3 {
+  color: white;
+}
+
+.Dark .Pricing .box2 .price {
+  color: white;
+}
+
+.Dark .Pricing .box2 .price span {
+  color: white;
+}
+
+.Dark .Pricing .box2 li {
+  color: white;
+}
+
+.Dark .Pricing .box2 a {
+  color: black;
+  background: white;
+}
+
+.Dark .Reviews {
+  background: #1c1c1c;
+}
+
+.Dark .Reviews h1 {
+  color: white;
+}
+
+.Dark .Reviews .box {
+  background: black;
+}
+
+.Dark .Reviews .box .user .name h3 {
+  color: white;
+}
+
+.Dark .Reviews .box .down p {
+  color: #ededed;
+}
+
+.Dark .Reviews .box2 {
+  background: black;
+}
+
+.Dark .Reviews .box2 .user .name h3 {
+  color: white;
+}
+
+.Dark .Reviews .box2 .down p {
+  color: #ededed;
+}
+
+.Dark .Reviews .box3 {
+  background: black;
+}
+
+.Dark .Reviews .box3 .user .name h3 {
+  color: white;
+}
+
+.Dark .Reviews .box3 .down p {
+  color: #ededed;
+}
+
+.Dark .Reviews .box4 {
+  background: black;
+}
+
+.Dark .Reviews .box4 .user .name h3 {
+  color: white;
+}
+
+.Dark .Reviews .box4 .down p {
+  color: #ededed;
+}
+
+.Dark .Blogs {
+  background: black;
+}
+
+.Dark .Blogs h1 {
+  color: white;
+}
+
+.Dark .Blogs .box {
+  background: #1c1c1c;
+  border: 1px solid white;
+}
+
+.Dark .Blogs .box h3 {
+  color: white;
+}
+
+.Dark .Blogs .box p {
+  color: #ededed;
+}
+
+.Dark .Blogs .box .bottom {
+  border-top: 1px solid white;
+}
+
+.Dark .Blogs .box .bottom .one {
+  color: white;
+}
+
+.Dark .Blogs .box .bottom .two a {
+  color: white;
+}
+
+.Dark .Contact {
+  background: black;
+}
+
+.Dark .Contact h1 {
+  color: white;
+}
+
+.Dark .Contact .container .left .details h3 {
+  color: white;
+}
+
+.Dark .Contact .container .left .box2 a {
+  background: white;
+}
+
+.Dark .Contact .container .left .box2 a i {
+  color: black;
+}
+
+.Dark .Contact .container .left .box2 a:hover {
+  background: #0c9c56;
+}
+
+.Dark .Contact .container .left .box2 a:hover i {
+  color: white;
+}
+
+.Dark .Contact .container .right input {
+  background: #1c1c1c;
+}
+
+.Dark .Contact .container .right textarea {
+  background: #1c1c1c;
+}
+
+.Dark .Contact .container .right a {
+  background: #ededed;
+  color: black;
+}
+
+.Dark .Contact .container .right a:hover {
+  background: #0c9c56;
+  color: white;
+}
+
 .category .Home {
   display: none;
 }
@@ -1663,6 +2217,10 @@ body {
 
 .contact .Home {
   display: none;
+}
+
+.contact .Contact {
+  display: block;
 }
 
 .contact .header .hom {

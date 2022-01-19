@@ -76,3 +76,6 @@ let GetStared = document.querySelector(".GetStared")
 GetStared.addEventListener("click", ()=>{  body.classList.add("category") })
 //--------------------------------------------------------------------
 
+let sun = document.querySelector("#sun");
+sun.addEventListener("click", ()=>{  body.classList.toggle("Dark") })
+

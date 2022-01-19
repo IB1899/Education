@@ -1,4 +1,4 @@
-$green:#0c9c56;  $black:#242424;   $yellow:#eaff05;
+$green:#0c9c56;  $black:#242424;   $yellow:#eaff05;  $dark:#1c1c1c;
 
 @mixin big{    @media(max-width:1000px){@content}    };
 @mixin medium{ @media(max-width:750px){@content}     };
@@ -12,13 +12,17 @@ body{margin-left:210px;  }
 
 .header{    position:fixed; left:0; top:0; height:100vh;  width:210px; background:$green; 
 
-    .title{ display:flex; justify-content:left; margin:20px 10px;    border-bottom:solid 1px white;
+    .title{ display:flex; justify-content:left; margin:20px 10px;  padding-bottom:5px;  border-bottom:solid 1px white;
         i{margin-right:10px;  font-size:25px; color:$yellow;   &::selection{color:$black;} }
         h3{font-size:24px; color:white; font-weight:100px;   &::selection{color:$black;  background:$green;} }
-        #sun{color:white;  margin-left:25px; padding-top:3px; font-size:21px;  cursor:pointer;
-            &:hover{color:black;    animation:try 1.5s linear infinite;  margin-top:0px; }   
-        }
+        #sun{color:white;  margin-left:25px; padding-top:3px; font-size:21px;  cursor:pointer;}
+        #sun:hover{color:black;    animation:try 1.5s linear infinite;  margin-top:0px;}
         @keyframes try{  100%{transform: rotate(360deg) ;} }
+
+        #sun:hover ~ .sun{display:block;  position:absolute; left:216px; top:18px; background:black;
+            color:white; padding:7px;  border-radius:10px;   .dark{display:block; width:80px;}
+        }
+        .sun{display:none; .dark{display:none;}  .white{display:none;}}
     }
 
     .ul{
@@ -36,9 +40,9 @@ body{margin-left:210px;  }
             a:hover{ background:$black; color:white; transition:.5s;}
         }
         .rights{ margin-top:35px; display:grid; justify-content:center;
-            h3{ color:white; font-size:14px; font-family: 'Raleway', sans-serif;  margin-bottom:5px;  &::selection{color:$black;}}
-            span{color:$yellow; font-size:16px;   &::selection{color:$black;}}
-            h4{ color:white; font-size:13px; font-family: 'Raleway', sans-serif; &::selection{color:$black;}}
+            h3{ color:white; font-size:14px; font-family: 'Raleway', sans-serif;  margin-bottom:5px; }
+            span{color:$yellow; font-size:15px;   &::selection{color:white;}}
+            h4{ color:white; font-size:13px; font-family: 'Raleway', sans-serif; }
         }
 
     }
@@ -47,7 +51,7 @@ body{margin-left:210px;  }
 
 
 //------------------------------  Home section statrs ------------------------------------//
-.Home{   display:flex; align-items:center; justify-content:center; height:100vh; //display:none;
+.Home{   display:flex; align-items:center; justify-content:center; height:100vh; 
 
     img{ height:650px; width:650px;  margin-top:-100px;}
 
@@ -59,7 +63,7 @@ body{margin-left:210px;  }
           &::selection{color:white; background:black;}  
         }
 
-        p{ width:390px;  font-size:16px;  line-height:23px;  font-family: 'Raleway', sans-serif;
+        p{ width:390px;  font-size:16px;  line-height:24px;  font-family: 'Raleway', sans-serif;
             font-weight:700; margin-bottom:25px;  &::selection{color:white; background:$black;}
         }
 
@@ -72,8 +76,8 @@ body{margin-left:210px;  }
 
 
 //------------------------------  Category section statrs ------------------------------------//
-.Category{ display:none;
-    h1{ text-align:center;  color:$green;  font-size:18px;  text-transform:uppercase; margin-top:30px;  
+.Category{ display:none; padding:20px 0;
+    h1{ text-align:center;  color:$green;  font-size:18px;  text-transform:uppercase; margin-top:10px;  
         font-family: 'Oxygen', sans-serif; font-weight:900;
     }
     h2{text-align:center;  color:$black;  font-size:30px;  text-transform:uppercase;  font-weight:900;
@@ -99,7 +103,7 @@ body{margin-left:210px;  }
             .boxin{ display:grid;     margin-top:10px;   grid-template-columns: repeat(2, auto) ;  
                 
                 .stars{ justify-self: center;    grid-column:1/3; color:white;   margin-bottom:17px;
-                     i{ color:$green; background:none;  padding:0;  font-size:16px; }   
+                    i{ color:$green; background:none;  padding:0;  font-size:16px; }   
                 } 
                 .price{ justify-self:start;   color:$green;    span{color:white;} }
 
@@ -130,7 +134,7 @@ body{margin-left:210px;  }
         grid-column-gap:30px; grid-row-gap:20px;  
 
         .box{ padding:10px;    height:250px; width:250px; text-align:center; display:grid; 
-            box-shadow: 3px 3px 5px $green ;
+            box-shadow: 3px 3px 5px $green ;  
             .one{  
                 img{width:220px;  }
                 h3{ margin-top:-10px;}
@@ -180,7 +184,7 @@ body{margin-left:210px;  }
 //-----------------
 .About.open{  .text{display:none;}      img{display:none;}
 
-.menu{ position:absolute; display:block;  top:0; left:210px;  background-color:#c2c2c2;  height:100vh; 
+.menu{ position:absolute; display:block;  top:0; left:210px;  background:#c2c2c2;  height:100vh; 
         
     i{color:$green;  font-size:32px;  position:absolute;  top:15px; right:25px;  cursor:pointer;}
     i:hover{color:black; transition:.6s;  }
@@ -317,7 +321,7 @@ body{margin-left:210px;  }
 
 
 //------------------------------  Reviews section statrs ------------------------------------//
-.Blogs{ background:#ededed; padding:23px 0;    display:none;
+.Blogs{ background:#ededed; padding:26px 0; height:100vh;   display:none;
     h2{text-align:center;  color:$green;  font-size:19px;   text-transform:uppercase;  font-weight:900;   &::selection{color:white; background:black;}}
     h1{text-align:center;  color:$black;  font-size:29px;   text-transform:uppercase;  font-weight:900; font-family: 'Roboto Slab', serif;  &::selection{color:white; background:black;}}
 
@@ -348,61 +352,99 @@ body{margin-left:210px;  }
 
 
 //------------------------------  Contact section statrs ------------------------------------//
+.Contact{  display:none;  height:93vh;  padding:21.5px 0;
+    h2{text-align:center;  color:$green;  font-size:19px;   text-transform:uppercase; 
+        font-family: 'Roboto Slab', serif;  &::selection{color:white; background:black;}
+    }
+    h1{text-align:center;  color:$black;  font-size:29px;   text-transform:uppercase;
+        font-family: 'Roboto Slab', serif;  &::selection{color:white; background:black;}
+    }
+    .container{ display:flex;  margin-top:10px; 
+        
+        .left{ margin-left:40px; margin-top:-20px;
+            .box{ display:flex;  margin-top:40px;
+                i{color:white;  background:$green;  border-radius:50px;  margin-right:10px;   margin-top:40px;  padding:10px;}
+               
+                .details{ transform:translateY(35px);
+                    h3{ color:$black; font-size:21px; margin-bottom:5px;}
+                    span{ color:gray; font-size:15px;  margin-left:10px; line-height:20px;}
+                }       
+            }    
+            .box2{ display:flex;  margin-top:60px;  margin-left:10px;
+                a{text-decoration:none;  margin-right:5px;  padding:9px;   background:$black;  i{color:white; font-size:16px;}
+                &:hover{background:$green;  transition:.3s;}
+                }
+            }
+        }
+
+        .right{  margin-left:90px;  margin-top:70px;
+            .input{ display:grid;  grid-template-columns:repeat(2,auto); grid-column-gap:10px;  grid-row-gap:10px;
+                
+                input{ background:#ededed;  color:gray;  width:310px; height:38px;  font-size:15px;  border:none; padding-left:13px;}
+                textarea{ grid-column: 1/3;  background:#ededed;  color:gray;  font-size:15px;  border:none;  margin-bottom:25px;  padding:10px;}
+            }
+            a{color:white; background:black;  padding:8px 15px;  text-decoration:none;  box-shadow:2px 2px 3px $green; &:hover{background:$green; transition:.4s;}}
+        }
+    }
+}
 
 
 
 
 
+//     Dark Mode --------------------------------------------------------------------------------//
 
+.Dark{  transition:1s;
 
+    .header{
+        .title{ border-bottom:1px solid black;}
+        #sun:hover ~ .sun{ background:white; color:$dark; width:83px; .dark{display:none;}  .white{display:block;}}  #sun{color:$dark; &:hover{color:white;}}
+        h3{color:black;}  .contacts{ a{background:$dark; color:white; &:hover{background:white;  color:$dark;}}   h3{color:$dark;} h4{color:$dark; font-weight:900;}}
+    }
 
+    .Home{
+        background:black; h1{color:white;}  p{color:#ededed;}   a{background:white;  color:$green;   &:hover{color:white;}}
+    }
 
+    .Category{
+         background:$dark;
+        h2{color:white;} h4{color:white} .container{ .box{background:$dark; border:1px solid white; h3{color:white;} p{color:#d9d9d9;} 
+        &:hover{background:white; h3{color:black;} .stars{color:black;}  .price{span{color:black;}} .veiw{color:black;}  }     }}
+        .container2{.box{ background:$dark; h5{color:white;}  &:hover{background:white;  h5{color:black} }  }}
+        .container3{.box{ background:black;  .one{h3{color:white;}}   &:hover{background:$green;}  }}
+    }
 
+    .About{
+        background:$dark; h2{color:white;}  li{color:#ededed;}  a{background:white; color:black}
+    }
+    .About.open{
+        .menu{background:$dark;}  ul{li{color:#ededed;}  p{color:#ededed;}}  i:hover{color:white}
+    }
 
+    .Pricing{
+       background:black;  h1{color:white;}  .box{background:$dark;  h3{color:white}  .price{color:white;
+         span{color:white;}} li{color:white}  a{background:white; color:black;} }
+         .box2{ background:$dark;  h3{color:white} .price{color:white; span{color:white;}}  li{color:white;} a{color:black; background:white;}}
+    }
 
+    .Reviews{
+       background:$dark; h1{color:white;}  .box{background:black; .user{ .name{h3{color:white;}}} .down{p{color:#ededed}}  }
+       .box2{background:black; .user{ .name{h3{color:white;}}} .down{p{color:#ededed}}}
+       .box3{background:black; .user{ .name{h3{color:white;}}} .down{p{color:#ededed}}}
+       .box4{background:black; .user{ .name{h3{color:white;}}} .down{p{color:#ededed}}}
+    }
 
+    .Blogs{
+        background:black; h1{color:white;}  
+        .box{background:$dark; border:1px solid white;  h3{color:white;}  p{color:#ededed} 
+        .bottom{.one{color:white;} .two{a{color:white}}  border-top:1px solid white; }   }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .Contact{
+        background:black; h1{color:white;}  .container{ .left{.details{h3{color:white;}}  .box2{a{background:white;i{color:black;} &:hover{background:$green; i{color:white;}}}}}
+          .right{ input{background:$dark;} textarea{background:$dark;}  a{background:#ededed; color:black; &:hover{background:$green; color:white;}}    }}
+    }
+}
 
 
 //------------------------------  Router ------------------------------------//
@@ -435,6 +477,7 @@ body{margin-left:210px;  }
 }  
 //-----
 .contact .Home{display:none;}
+.contact .Contact{display:block;}
 .contact .header{
     .hom{color:white; font-weight:100;}
     .con{color:$black; font-weight:900;}
@@ -454,3 +497,5 @@ body{margin-left:210px;  }
     .blo{color:$black; font-weight:900;}
 }  
 //-----
+
+//           Done
