@@ -79,3 +79,18 @@ GetStared.addEventListener("click", ()=>{  body.classList.add("category") })
 let sun = document.querySelector("#sun");
 sun.addEventListener("click", ()=>{  body.classList.toggle("Dark") })
 
+//---------------------------------------------------------------------
+let bar = document.querySelector("#bar")
+let CloceBar = document.querySelector("#CloseBar")
+
+bar.addEventListener("click", ()=>{  body.classList.add("openbar")  })
+CloceBar.addEventListener("click", ()=>{  body.classList.remove("openbar")  })
+//---------------------------------------------------------------------
+blogs.addEventListener("click", ()=>{  body.classList.add("openbar") });
+home.addEventListener("click", ()=>{ body.classList.remove("openbar")});
+contact.addEventListener("click", ()=>{ body.classList.remove("openbar")});
+category.addEventListener("click", ()=>{ body.classList.remove("openbar")});
+about.addEventListener("click", ()=>{ body.classList.remove("openbar")});
+pricing.addEventListener("click", ()=>{ body.classList.remove("openbar")});
+review.addEventListener("click", ()=>{ body.classList.remove("openbar")});
+blogs.addEventListener("click", ()=>{ body.classList.remove("openbar")})
