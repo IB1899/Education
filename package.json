@@ -4,8 +4,12 @@
   "description": "This is a static education frontend ",
   "main": "index.js",
   "scripts": {
-    "dev":"open ./work/index.html"
+    "dev": "open ./work/index.html"
   },
   "author": "Ibrahim Ali",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bash": "^0.0.1",
+    "sh": "^0.0.3"
+  }
 }
