@@ -1,0 +1,11 @@
+{
+  "name": "education",
+  "version": "1.0.0",
+  "description": "This is a static education frontend ",
+  "main": "index.js",
+  "scripts": {
+    "dev":"open ./work/index.html"
+  },
+  "author": "Ibrahim Ali",
+  "license": "ISC"
+}
