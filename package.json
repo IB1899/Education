@@ -7,9 +7,5 @@
     "dev": "open ./work/index.html"
   },
   "author": "Ibrahim Ali",
-  "license": "ISC",
-  "dependencies": {
-    "bash": "^0.0.1",
-    "sh": "^0.0.3"
-  }
+  "license": "ISC"
 }
